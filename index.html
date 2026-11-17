@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Play Pips: Rules, Strategy, and Where to Practice</title>
+<meta name="description" content="A plain-language guide to Pips, the domino logic puzzle: how regions and rules work, strategy habits that help, and where to play Pips online for free.">
+<link rel="canonical" href="https://pipsgame.us/">
+<style>
+  :root{
+    --ink:#1d2326;
+    --ink-soft:#485257;
+    --paper:#f9faf7;
+    --panel:#ecf1ee;
+    --accent:#c4533a;
+    --accent-dark:#8e3622;
+    --line:#d3dcd7;
+    --maxw:680px;
+  }
+a.btn-link{
+  display:inline-block;
+  padding:0.05em 0.65em;
+  margin:0 0.1em;
+  background:var(--accent);
+  color:#fff;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:0.95em;
+  font-weight:600;
+  line-height:1.5;
+  text-decoration:none;
+  border-radius:999px;
+  transition:background .15s ease, transform .15s ease;
+}
+a.btn-link:hover,
+a.btn-link:focus-visible{
+  background:var(--accent-dark);
+  transform:translateY(-1px);
+}
+a.btn-link:focus-visible{
+  outline:2px solid var(--accent-dark);
+  outline-offset:2px;
+}
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,"Times New Roman",serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:4.5rem 1.5rem 6rem;}
+  header.hero{margin-bottom:3rem;}
+  .kicker{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.95rem;color:var(--accent-dark);font-weight:600;
+    letter-spacing:0.01em;margin:0 0 0.9rem;
+  }
+  h1{font-size:2.4rem;line-height:1.18;margin:0 0 1.1rem;font-weight:600;letter-spacing:-0.01em;}
+  .dek{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:1.08rem;color:var(--ink-soft);margin:0;max-width:56ch;
+  }
+  .board{
+    margin-top:2.2rem;border:1px solid var(--line);background:var(--panel);
+    border-radius:4px;padding:1.1rem 1.3rem;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.95rem;color:var(--ink-soft);
+    display:flex;gap:0.9rem;align-items:flex-start;
+  }
+  .board svg{flex:0 0 auto;margin-top:0.15rem;}
+  h2{font-size:1.5rem;margin:2.8rem 0 1rem;font-weight:600;letter-spacing:-0.005em;}
+  p{margin:0 0 1.2rem;font-size:1.08rem;}
+  ul,ol{margin:0 0 1.2rem;padding-left:1.3rem;}
+  li{margin-bottom:0.5rem;font-size:1.08rem;}
+  a{color:var(--accent-dark);text-decoration-color:rgba(142,54,34,0.4);text-underline-offset:3px;}
+  a:hover{text-decoration-color:var(--accent-dark);}
+  .callout{
+    border-left:3px solid var(--accent);padding:0.2rem 0 0.2rem 1.1rem;
+    margin:1.6rem 0;color:var(--ink-soft);font-size:1.02rem;
+  }
+  .ruletable{
+    width:100%;border-collapse:collapse;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.95rem;margin:1.3rem 0 1.6rem;
+  }
+  .ruletable th,.ruletable td{text-align:left;padding:0.55rem 0.7rem;border-bottom:1px solid var(--line);}
+  .ruletable th{font-weight:600;color:var(--ink-soft);}
+  footer{
+    margin-top:3.5rem;padding-top:1.6rem;border-top:1px solid var(--line);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:0.9rem;color:var(--ink-soft);
+  }
+  @media (max-width:520px){
+    h1{font-size:1.9rem;}
+    .wrap{padding:3rem 1.2rem 4rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">Logic puzzles</p>
+    <h1>How to play Pips: rules, strategy, and where to practice</h1>
+    <p class="dek">A plain-language guide to the domino logic puzzle: what the colored regions mean, how to place tiles with confidence, and a few habits that help you clear the board faster.</p>
+
+    <div class="board">
+      <svg width="40" height="26" viewBox="0 0 40 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="24" rx="4" stroke="#8e3622" stroke-width="1.6"/>
+        <line x1="20" y1="3" x2="20" y2="23" stroke="#8e3622" stroke-width="1.4"/>
+        <circle cx="10" cy="13" r="2.2" fill="#8e3622"/>
+        <circle cx="28" cy="8" r="2.2" fill="#8e3622"/>
+        <circle cx="32" cy="18" r="2.2" fill="#8e3622"/>
+      </svg>
+      <span>Each puzzle gives you a set of dominoes and a grid divided into colored regions. Place every domino so that each region's condition is satisfied at the same time.</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>The basic rules</h2>
+    <p>Every domino has two halves, and each half shows between zero and six dots, called pips. Your job is to fit all of the supplied dominoes onto the grid so that no cell is left empty and no tile is used twice. The grid is split into colored regions, and each region carries a small label that tells you what the pips inside it must add up to or how they must relate to each other.</p>
+    <p>You can try the format for yourself on <a href="https://pipsgame.us/" class="btn-link">Pips NYT</a> style boards right in your browser, with instant feedback whenever a region rule is met or broken.</p>
+  </section>
+
+  <section>
+    <h2>Understanding the region conditions</h2>
+    <p>There are only a handful of region types, which is why the pips rules are quick to learn even though the boards can get tricky. Once you can recognize each one at a glance, every puzzle becomes a series of small eliminations.</p>
+    <table class="ruletable">
+      <tr><th>Region label</th><th>What it means</th></tr>
+      <tr><td>Equal sign</td><td>Every pip value in the region must be the same</td></tr>
+      <tr><td>Not-equal sign</td><td>Every pip value in the region must be different</td></tr>
+      <tr><td>A number</td><td>The pips in the region must add up to exactly that total</td></tr>
+      <tr><td>Less-than sign with a number</td><td>The total must stay below that number</td></tr>
+      <tr><td>Greater-than sign with a number</td><td>The total must be above that number</td></tr>
+      <tr><td>No label</td><td>Any pips are allowed, so the region adds no constraint</td></tr>
+    </table>
+    <p>Boards usually come in easy, medium, and hard versions. The rules never change between them; harder boards simply link more regions together so that one placement affects several others.</p>
+  </section>
+
+  <section>
+    <h2>A few strategy habits</h2>
+    <ul>
+      <li><strong>Start with the tightest regions.</strong> A region with a total of zero, or a tiny region with a fixed sum, often allows only one tile and gives you a safe first move.</li>
+      <li><strong>Read the whole board before placing anything.</strong> Spend the first minute noting which regions look strict and which look loose, then work from strict to loose.</li>
+      <li><strong>Use elimination, not guessing.</strong> If a domino cannot satisfy a region, cross it out for that spot. Often only one option survives.</li>
+      <li><strong>Watch where regions meet.</strong> A single domino can span two regions, so a tile that fits one condition may quietly break its neighbor.</li>
+    </ul>
+    <div class="callout">
+      If one puzzle a day is not enough, <a href="https://pipsgame.us/unlimited/" class="btn-link">Pips Unlimited</a> serves fresh boards on demand, which is a low-pressure way to build the pattern recognition described above without waiting for tomorrow's release.
+    </div>
+  </section>
+
+  <section>
+    <h2>Playing the daily puzzle</h2>
+    <p>Most people treat Pips as a short daily ritual. Difficulty tends to ramp up through the week, so an easier board early on is a good time to try a new technique, while the toughest boards reward patience and careful note-taking. If you are searching for the pips game today and want to warm up first, a couple of practice grids on Pipsgame.us boards will get your reasoning engaged before you tackle the official one.</p>
+    <p>Keep a simple routine: solve at a regular time, try the board before looking for hints, and review any region that slowed you down. That small habit is what turns a casual hobby into a steady skill.</p>
+  </section>
+
+  <section>
+    <h2>When you want more practice</h2>
+    <p>Repetition is the fastest way to improve. Working through many boards teaches you which tile combinations usually satisfy which regions, and mistakes cost nothing when you can undo freely. A flexible Pips Unlimited session lets you choose your own difficulty, retry a layout that gave you trouble, and stop whenever you feel satisfied.</p>
+    <p>Whether you are brand new or chasing faster solves, the combination of the daily board and unlimited practice is hard to beat. Start on the home page at Pips Game, then move over to Pips Unlimited whenever you want extra rounds.</p>
+  </section>
+
+  <footer>
+    Puzzle rules and terminology are explained here in general terms and aren't affiliated with any single publisher's version of the game.
+  </footer>
+
+</div>
+</body>
+</html>
